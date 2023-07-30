@@ -6,13 +6,9 @@
 </head>
 <body>
     <script>
-        // URLパラメータを取得
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-
-        // パラメータ名が'url'の値を取得（デコードされる）
         const redirectUrl = "misaka://opentweak="+urlParams.get('repo')+"&"+urlParams.get('tweak')
-        // リダイレクト
         if (redirectUrl) {
             window.location.href = redirectUrl;
         }
