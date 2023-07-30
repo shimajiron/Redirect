@@ -11,7 +11,7 @@
         const urlParams = new URLSearchParams(queryString);
 
         // パラメータ名が'url'の値を取得（デコードされる）
-        const redirectUrl = decodeURIComponent(urlParams.get('url'));
+        const redirectUrl = "misaka://"+urlParams.get('repo')+"&"+urlParams.get('tweak')
 
         alert(redirectUrl)
         // リダイレクト
