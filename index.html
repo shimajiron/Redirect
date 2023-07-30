@@ -10,8 +10,8 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
 
-        // パラメータ名が'url'の値を取得
-        const redirectUrl = urlParams.get('url');
+        // パラメータ名が'url'の値を取得（デコードされる）
+        const redirectUrl = decodeURIComponent(urlParams.get('url'));
 
         // リダイレクト
         if (redirectUrl) {
