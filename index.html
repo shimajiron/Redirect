@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>リダイレクトページ</title>
+</head>
+<body>
+    <script>
+        // URLパラメータを取得
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        // パラメータ名が'url'の値を取得
+        const redirectUrl = urlParams.get('url');
+
+        // リダイレクト
+        if (redirectUrl) {
+            window.location.href = redirectUrl;
+        }
+    </script>
+</body>
+</html>
